@@ -7,4 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    
+
+<?php if ($arrayRoutes): ?>
+
+<ul>   
+    <?php foreach ($arrayRoutes as $rout): ?>
+        <li>
+            <a href="/?page=<?= $rout->adress ?>"><?= $rout->name ?></a>
+        </li>
+    <?php endforeach ?>
+</ul> 
+
+<?php endif ?>
   

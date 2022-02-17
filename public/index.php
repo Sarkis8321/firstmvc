@@ -6,6 +6,8 @@ require __DIR__ . '/../routes/routes.php';
 
 $Routes = new Routes;
 
+$arrayRoutes = $Routes->getAllRoutes();
+
 
 if (isset($_REQUEST['page']) && is_numeric($_REQUEST['page'])) {
     $state = null;
@@ -21,6 +23,6 @@ if (isset($_REQUEST['page']) && is_numeric($_REQUEST['page'])) {
         require __DIR__ . '/../controllers/'.$state->views;
     }
 } else {
-    require __DIR__ .'/404.php';
+    require __DIR__ .'/../controllers/main.php';
 }
 
