@@ -18,7 +18,7 @@ if (isset($_REQUEST['page']) && is_numeric($_REQUEST['page'])) {
     if ($state == null){
         require __DIR__ .'/404.php';
     } else {
-        require __DIR__ . '/'.$state->views;
+        require __DIR__ . '/../controllers/'.$state->views;
     }
 } else {
     require __DIR__ .'/404.php';

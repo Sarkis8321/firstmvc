@@ -5,3 +5,4 @@ RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 
 RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+ErrorDocument 404 http://firstmvc.test/public/404.php
