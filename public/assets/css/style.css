@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* navigation */
+
+.navigation {
+    
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navigation li a{
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 30, 255);
+    text-decoration: none;
+    color: rgb(0, 30, 255);
+    font-size: 34px;
+}
