@@ -13,18 +13,18 @@ class PostService
     public function __construct()
     {
         // Список объявлений, который у нас жестко заложен в коде
-        $this->posts[] = $this->createPost(
+        $this->createPost(
             'Продам слона',
             '+79990000001',
             'Продается пока еще небольшой дрессировнный африканский слон.'
         );
 
-        $this->posts[] = $this->createPost(
+        $this->createPost(
             'Сдам 8-к квартиру около метро недорого',
             '+79990000002',
             'Сдается квартира, евроремонт, без хозяев, только серьезным людям.'
         );
-        $this->posts[] = $this->createPost(
+        $this->createPost(
             'Сдам 7-к квартиру около метро недорого',
             '+79990000002',
             'Сдается квартира, евроремонт, без хозяев, только серьезным людям.'
@@ -32,14 +32,14 @@ class PostService
         // .. при желании можно добавить еще
     }
 
-    private function createPost($title, $phoneNumber, $text)
+    public function createPost($title, $phoneNumber, $text)
     {
         $c = new Post;
         $c->title = $title;
         $c->phoneNumber = $phoneNumber;
         $c->text = $text;
 
-        return $c;
+        $this->posts[] = $c;
     }
 
     /**

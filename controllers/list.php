@@ -1,7 +1,16 @@
 <?php 
 
-// Получаем список объявлений
-$posts = $postService->getAllPosts();
+if (isset($_POST['title'])) {
+
+    $postService->createPost($_POST['title'],$_POST['phone-number'],$_POST['text']);
+    $posts = $postService->getAllPosts();
+} else {
+    // Получаем список объявлений
+    $posts = $postService->getAllPosts();
+}
+
+
+
 
 // Вызываем вид, чтобы отобразить их
 require __DIR__ . '/../view/header.phtml';
